@@ -1,0 +1,19 @@
+{
+  "appName": "TactixStation",
+  "version": "1.0.0",
+  "updateIntervalMs": 5000,
+  "radioStationsCount": 5,
+  "satelliteUpdateIntervalMs": 3000,
+  "theme": {
+    "primaryColor": "#00bfff",
+    "backgroundColor": "#0e0e10",
+    "font": "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+  },
+  "apiEndpoints": {
+    "systemInfo": "/api/system-info",
+    "radioStations": "/api/radio-stations",
+    "satellites": "/api/satellites",
+    "address": "/api/address",
+    "news": "/api/news"
+  }
+}
