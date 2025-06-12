@@ -1,0 +1,14 @@
+# style.tbl - Style config table for app use
+
+[colors]
+background=#0a0e23
+accent=#1e90ff
+highlight=#38b6ff
+text=#c0c8e0
+
+[fonts]
+primary='Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+[effects]
+shadow=rgba(0,0,50,0.7)
+glow=var(--highlight-color)
