@@ -1,1 +1,25 @@
+<!-- style.xml - UI Theme Configuration -->
 
+<style name="TactixStationTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+  <item name="colorPrimary">#1E90FF</item>
+  <item name="colorPrimaryDark">#005BBB</item>
+  <item name="colorAccent">#38B6FF</item>
+  <item name="android:textColorPrimary">#C0C8E0</item>
+  <item name="android:windowBackground">#0A0E23</item>
+  <item name="android:buttonStyle">@style/CustomButton</item>
+  <item name="android:progressBarStyle">@style/CustomProgressBar</item>
+</style>
+
+<style name="CustomButton" parent="Widget.AppCompat.Button">
+  <item name="android:backgroundTint">#1E90FF</item>
+  <item name="android:textColor">#0A0E23</item>
+  <item name="android:fontFamily">sans-serif-medium</item>
+  <item name="android:cornerRadius">8dp</item>
+  <item name="android:elevation">4dp</item>
+</style>
+
+<style name="CustomProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+  <item name="android:progressDrawable">@drawable/progress_bar_drawable</item>
+  <item name="android:minHeight">12dp</item>
+  <item name="android:maxHeight">12dp</item>
+</style>
