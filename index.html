@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TactixStation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"
+    async
+    defer
+  ></script>
+</head>
+<body>
+  <div id="loading-screen">
+    <div id="satellite-icon">🛰</div>
+    <div id="loading-bar"></div>
+    <p id="loading-status">Loading TactixStation...</p>
+  </div>
+
+  <div id="app" class="hidden">
+    <div id="header">
+      <h1>TactixStation</h1>
+      <button id="settings-btn">⚙️</button>
+    </div>
+
+    <div id="tabs">
+      <button onclick="switchTab('radio')">Radio</button>
+      <button onclick="switchTab('satellites')">Satellites</button>
+      <button onclick="switchTab('info')">Info</button>
+    </div>
+
+    <div id="content">
+      <div id="map"></div>
+      <div id="radio-tab" class="tab-content hidden"></div>
+      <div id="satellites-tab" class="tab-content hidden"></div>
+      <div id="info-tab" class="tab-content hidden"></div>
+    </div>
+
+    <div id="audio-player" draggable="true">
+      <span id="station-name">No station playing</span>
+      <audio id="player" controls></audio>
+    </div>
+  </div>
+</body>
+</html>
