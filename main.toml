@@ -1,0 +1,29 @@
+# main.toml - App runtime configuration
+
+[app]
+name = "TactixStation"
+version = "1.0.0"
+environment = "production"
+default_locale = "en_US"
+
+[logging]
+level = "INFO"
+file = "logs/app.log"
+max_size_mb = 10
+backup_count = 5
+
+[network]
+enable_location = true
+location_update_interval_ms = 5000
+radio_station_limit = 8
+satellite_refresh_seconds = 15
+
+[performance]
+enable_audio_cache = true
+cache_expiry_minutes = 60
+enable_gpu_acceleration = false
+
+[ui]
+theme = "dark"
+enable_animations = true
+fullscreen_audio_player = true
