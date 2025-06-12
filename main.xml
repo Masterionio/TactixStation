@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appConfig>
+  <appName>TactixStation</appName>
+  <version>1.0.0</version>
+  <updateIntervals>
+    <radio>5000</radio>
+    <satellites>3000</satellites>
+  </updateIntervals>
+  <radioStationsCount>5</radioStationsCount>
+  <theme>
+    <primaryColor>#00bfff</primaryColor>
+    <backgroundColor>#0e0e10</backgroundColor>
+    <font>Segoe UI, Tahoma, Geneva, Verdana, sans-serif</font>
+  </theme>
+  <apiEndpoints>
+    <systemInfo>/api/system-info</systemInfo>
+    <radioStations>/api/radio-stations</radioStations>
+    <satellites>/api/satellites</satellites>
+    <address>/api/address</address>
+    <news>/api/news</news>
+  </apiEndpoints>
+</appConfig>
