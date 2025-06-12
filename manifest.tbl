@@ -1,0 +1,8 @@
+# manifest.tbl - Manifest settings for TactixStation
+
+[app]
+name=TactixStation
+version=1.0.0
+theme=dark-futuristic
+author=YourName
+license=MIT
