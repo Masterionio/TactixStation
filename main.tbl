@@ -1,0 +1,8 @@
+# main.tbl - Main application configuration
+
+[settings]
+location_permission_required=true
+satellite_update_interval=5000
+radio_station_limit=5
+audio_player_draggable=true
+fullscreen_audio=true
