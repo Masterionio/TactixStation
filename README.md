@@ -81,7 +81,7 @@ Futuristic radio + satellite tracking web app powered by FastAPI & React.
 - UHD map + 4K native audio/video
 - AI Agent
 - Starlink + GNSS access
-- Data usage and plan dashboard
+- Cellular data usage and plan dashboard
 
 ---
 
