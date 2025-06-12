@@ -1,194 +1,69 @@
-/* style.css - Futuristic Dark Theme with Blue Accents */
-
-:root {
-  --bg-color: #0a0e23;
-  --accent-color: #1e90ff;
-  --text-color: #c0c8e0;
-  --highlight-color: #38b6ff;
-  --shadow-color: rgba(0, 0, 50, 0.7);
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
   margin: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  overflow-x: hidden;
-  user-select: none;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #00d0ff;
 }
 
-a, button {
-  color: var(--accent-color);
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-a:hover, button:hover {
-  color: var(--highlight-color);
-}
-
-header, footer {
-  background-color: #05091a;
-  padding: 1rem 2rem;
-  box-shadow: 0 0 15px var(--shadow-color);
-}
-
-.loading-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #000f3d, #001a75);
-  color: var(--accent-color);
-  font-size: 1.3rem;
-}
-
-.progress-bar {
-  margin-top: 1rem;
-  width: 300px;
-  height: 12px;
-  border-radius: 6px;
-  background-color: #091938;
-  overflow: hidden;
-  box-shadow: 0 0 8px var(--accent-color);
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #007bff, #00d4ff);
-  width: 0%;
-  transition: width 0.4s ease-in-out;
-}
-
-button.reload-btn {
-  margin-top: 2rem;
-  padding: 0.5rem 1.2rem;
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  color: #0a0e23;
-  box-shadow: 0 0 12px var(--highlight-color);
-}
-
-button.reload-btn:hover {
-  background-color: var(--highlight-color);
-  color: #ffffff;
-}
-
-/* Tabs styling */
-.tabs {
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
-  border-bottom: 2px solid #112255;
-}
-
-.tab {
-  padding: 0.7rem 1.5rem;
-  cursor: pointer;
-  color: var(--accent-color);
-  border-bottom: 3px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.tab.active {
-  border-color: var(--highlight-color);
-  font-weight: 700;
-}
-
-/* Audio Player */
-.audio-player {
+#loading-screen {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 350px;
-  background-color: #111a44;
-  border-radius: 12px;
-  box-shadow: 0 0 20px var(--accent-color);
-  padding: 1rem;
-  user-select: none;
-  cursor: move;
-  z-index: 1000;
-  color: var(--text-color);
-}
-
-.audio-player.fullscreen {
+  top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  bottom: 0;
-  left: 0;
-  border-radius: 0;
-  padding: 2rem;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #00d0ff;
+  z-index: 1000;
 }
 
-/* Volume slider */
-input[type=range].volume-slider {
-  width: 100%;
-  -webkit-appearance: none;
-  height: 6px;
-  border-radius: 3px;
-  background: linear-gradient(to right, var(--highlight-color), var(--accent-color));
-  outline: none;
-  margin-top: 10px;
+#loading-bar {
+  width: 50%;
+  height: 5px;
+  background: #00d0ff;
+  animation: loading 12s linear forwards;
+  margin: 20px 0;
 }
 
-input[type=range].volume-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: var(--highlight-color);
-  cursor: pointer;
-  border-radius: 50%;
-  border: 2px solid var(--accent-color);
-  transition: background 0.3s ease;
+@keyframes loading {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-input[type=range].volume-slider::-webkit-slider-thumb:hover {
-  background: var(--accent-color);
+.hidden {
+  display: none;
 }
 
-input[type=range].volume-slider::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: var(--highlight-color);
-  cursor: pointer;
-  border-radius: 50%;
-  border: 2px solid var(--accent-color);
-}
-
-/* Map container */
 #map {
+  height: 50vh;
   width: 100%;
-  height: 60vh;
-  border-radius: 12px;
-  box-shadow: 0 0 15px var(--shadow-color);
 }
 
-/* Satellite icon */
-.satellite-icon {
-  filter: drop-shadow(0 0 3px var(--highlight-color));
+#tabs button {
+  background: #111;
+  border: none;
+  padding: 10px;
+  color: #00d0ff;
+  cursor: pointer;
 }
 
-/* Radio station icon */
-.radio-icon {
-  filter: drop-shadow(0 0 3px var(--accent-color));
+#tabs button:hover {
+  background: #222;
 }
 
-/* Scrollbars */
-::-webkit-scrollbar {
-  width: 8px;
-  background: #0a0e23;
+#content {
+  padding: 10px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
+#audio-player {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #111;
+  padding: 10px;
   border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--highlight-color);
+  color: #fff;
+  z-index: 999;
 }
